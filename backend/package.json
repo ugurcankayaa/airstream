@@ -1,0 +1,39 @@
+{
+  "name": "airstream-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "npm --prefix ../core run build",
+    "predev": "npm --prefix ../core run build",
+    "prestart": "npm --prefix ../core run build",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'tsx' src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "@types/winston": "^2.4.4",
+    "@types/ws": "^8.18.1",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@airstream/core": "file:../core",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "ioredis": "^5.9.3",
+    "winston": "^3.19.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "ws": "^8.19.0"
+  }
+}

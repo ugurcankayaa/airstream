@@ -1,0 +1,28 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["../core", "../backend", "../adsb-gateway"],
+  "entryPointStrategy": "packages",
+  "out": "dist",
+  "name": "AirStream",
+  "includeVersion": true,
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "excludePrivate": false,
+  "excludeProtected": false,
+  "excludeInternal": false,
+  "categorizeByGroup": true,
+  "categoryOrder": ["Core", "Backend", "ADS-B Gateway", "*"],
+  "sort": ["source-order"],
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true
+  },
+  "plugin": [],
+  "cleanOutputDir": true,
+  "gitRevision": "dev",
+  "githubPages": true
+}

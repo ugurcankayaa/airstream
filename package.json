@@ -1,0 +1,40 @@
+{
+  "name": "airstream",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time flight tracking system using a Raspberry Pi Zero with an ADS-B receiver. It publishes live aircraft data to Redis, which is streamed via WebSockets to an interactive React map for geospatial visualization.",
+  "workspaces": [
+    "core",
+    "backend",
+    "docs",
+    "adsb-gateway",
+    "ui"
+  ],
+  "scripts": {
+    "build": "npm run build -w core && npm run build -w backend && npm run build -w adsb-gateway && npm run build -w ui",
+    "build:core": "npm run build -w core",
+    "build:backend": "npm run build -w backend",
+    "build:adsb-gateway": "npm run build -w adsb-gateway",
+    "dev:backend": "npm run dev -w backend",
+    "dev:ui": "npm run dev -w ui",
+    "start:backend": "npm run start -w backend",
+    "docs:generate": "npm run generate -w docs",
+    "docs:serve": "npm run serve -w docs",
+    "clean": "npm run clean --workspaces --if-present",
+    "format": "npm run format --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "install:all": "npm install",
+    "build:ui": "npm run build -w ui"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "monorepo",
+    "airstream"
+  ],
+  "author": "Ugurcan Kaya",
+  "license": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@airstream/core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ioredis": "^5.9.3",
+    "path": "^0.12.7",
+    "winston": "^3.19.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}

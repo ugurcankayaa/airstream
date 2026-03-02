@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // modern JS output
+    "module": "NodeNext", // required for moduleResolution: NodeNext
+    "outDir": "./dist", // compiled files go here
+    "rootDir": "./src", // source files are in src
+    "strict": true, // strict type checks
+    "esModuleInterop": true, // allows default import of commonjs modules
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true, // generate type definitions
+    "declarationMap": true, // map for type declarations
+    "types": ["node"],
+    "moduleResolution": "nodenext"
+  },
+  "include": ["src/**/*"]
+}
