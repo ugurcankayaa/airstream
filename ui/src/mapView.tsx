@@ -171,9 +171,7 @@ export default function MapView() {
       zoom: 7,
     });
 
-    const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-    const configuredWsUrl = import.meta.env.VITE_UI_API_BASE_URL as string | undefined;
-    const wsUrl = configuredWsUrl ?? `${wsProtocol}//${window.location.hostname}:3000`;
+    const wsUrl = import.meta.env.VITE_UI_API_BASE_URL as string;
 
     const playAlarmSound = () => {
       try {
